@@ -94,7 +94,8 @@ ro.vendor.mtk_widevine_drm_l1_support=1
 
 # Display
 debug.cpurend.vsync=false
-debug.hwui.skia_atrace_enabled=false
+debug.hwui.skia_tracing_enabled=false
+debug.hwui.skia_use_perfetto_track_events=false
 debug.mediatek.disp_decompress=1
 debug.renderengine.backend=skiaglthreaded
 debug.sf.enable_gl_backpressure=0
