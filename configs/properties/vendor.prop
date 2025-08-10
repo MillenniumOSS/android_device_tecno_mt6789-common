@@ -78,6 +78,9 @@ vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
 vendor.mtk.camera.app.fd.video=1
 
+# Charging
+ro.vendor.mtk_fast_charging_support=1
+
 # Connsys
 persist.vendor.connsys.chipid=-1
 persist.vendor.connsys.dynamic.dump=0
