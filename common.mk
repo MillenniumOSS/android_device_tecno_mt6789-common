@@ -106,7 +106,7 @@ TARGET_EXCLUDES_AUDIOFX := true
     
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1.vendor:64
+    android.hardware.bluetooth-service.mediatek
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
