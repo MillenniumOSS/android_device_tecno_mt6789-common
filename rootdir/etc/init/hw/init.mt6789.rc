@@ -887,13 +887,6 @@ on property:persist.vendor.mediatek.fg.force25c=0
 on property:persist.vendor.mediatek.fg.log.enable=1
     write /dev/gauge/FG_daemon_log_level 7
 
-# add loghidl client
-service loghidlsysservice /system/bin/loghidlsysservice
-    class main
-    user root
-    group system
-    disabled
-
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
