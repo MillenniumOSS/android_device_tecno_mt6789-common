@@ -1,6 +1,3 @@
-# APK Verity
-ro.apk_verity.mode=2
-
 # ART
 dalvik.vm.dex2oat-minidebuginfo=false
 dalvik.vm.minidebuginfo=false
