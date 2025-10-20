@@ -1,9 +1,5 @@
 ## LG8n package version: LG8n-H891OPAeAf-S-GL-240531V2678, unless stated otherwise
 
-# AEE
-vendor/lib/libaedv.so
-vendor/lib64/libaedv.so
-
 # APU
 -vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
 -vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
