@@ -54,11 +54,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libutils.so', 'libutils-v32.so'),
     ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
         .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
-    'vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc': blob_fixup()
-        .add_line_if_missing('    interface android.hardware.media.c2@1.0::IComponentStore default')
-        .add_line_if_missing('    interface android.hardware.media.c2@1.1::IComponentStore default')
-        .add_line_if_missing('    interface android.hardware.media.c2@1.2::IComponentStore default')
-        .regex_replace('@1.2-mediatek', '@1.2-mediatek-64b'),
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
     ('vendor/bin/mnld', 'vendor/lib64/mt6789/libaalservice.so', 'vendor/lib64/mt6789/libcam.utils.sensorprovider.so'): blob_fixup()
