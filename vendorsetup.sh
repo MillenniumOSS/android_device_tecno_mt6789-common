@@ -13,6 +13,20 @@ curl https://raw.githubusercontent.com/MillenniumOSS/patches/refs/heads/sixteen-
 }
 cd ../../
 
+echo "- Applying perf anim override patch"
+cd frameworks/base
+curl https://raw.githubusercontent.com/MillenniumOSS/patches/refs/heads/sixteen-yaap/frameworks/base/0001-bugfix-add-perf-activity-anim-override.patch | git am || {
+  RET=1
+  git am --abort >/dev/null 2>&1
+}
+cd ../../
+cd vendor/yaap
+curl https://raw.githubusercontent.com/MillenniumOSS/patches/refs/heads/sixteen-yaap/vendor/yaap/0001-PATCH-add-PERF_ANIM_OVERRIDE-flag.patch | git am || {
+  RET=1
+  git am --abort >/dev/null 2>&1
+}
+cd ../../
+
 echo "- Applying Aperture Mediatek HFPS Mode and EIS Patches"
 cd packages/apps/Aperture
 curl https://raw.githubusercontent.com/MillenniumOSS/patches/refs/heads/sixteen/packages/apps/Aperture/0001-Aperture-Enable-MediaTek-HFPS-Mode-for-60-FPS-video-.patch | git am || {
