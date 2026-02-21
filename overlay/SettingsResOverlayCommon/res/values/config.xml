@@ -48,4 +48,8 @@
 
     <!-- Hide VRR toggle -->
     <bool name="config_disableVrrSetting">true</bool>
+
+    <!-- Maintainer String -->
+    <string name="maintainer_name" translatable="false">Shirayuki39</string>
+    <string name="maintainer_telegram" translatable="false">https://t.me/millenniumdiscussion</string>
 </resources>
