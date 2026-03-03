@@ -282,14 +282,13 @@ PRODUCT_PACKAGES += \
     Tag
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworksResCommon \
     OpenDeltaOverlayMT6789 \
     SettingsResOverlayCommon \
-    SystemUIResCommon \
-    TetheringResOverlayCommon \
-    WifiResOverlayCommon
+    SystemUIResCommon
 
 # Lineage-Specific Overlays
 PRODUCT_PACKAGES += \
@@ -424,6 +423,9 @@ PRODUCT_PACKAGES += \
    libhidlbase-v32:64 \
    libstagefright_foundation-v33:64 \
    libutils-v32:64
+
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # Secure Element
 PRODUCT_PACKAGES += \
