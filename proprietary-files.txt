@@ -1032,40 +1032,11 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 # Radio (gsm0710muxd) - from rodin-user-15-AP3A.240905.015.A2-OS2.0.5.0.VOJCNXM-release-keys
 vendor/bin/gsm0710muxd|70e638c98c51a70d6b3f797d37ad8528275eefbf
 
-# Radio (IMS)
-vendor/bin/hw/vtservice_hidl
-vendor/bin/rcs_volte_stack
-vendor/bin/volte_clientapi_ua
-vendor/bin/volte_imcb
-vendor/bin/volte_imsm_93
-vendor/bin/volte_md_status
-vendor/bin/volte_rcs_ua
-vendor/bin/volte_stack
-vendor/bin/volte_ua
-vendor/etc/init/init.volte_imcb.rc
-vendor/etc/init/init.volte_imsm_93.rc
-vendor/etc/init/init.volte_md_status.rc
-vendor/etc/init/init.volte_stack.rc
-vendor/etc/init/init.volte_ua.rc
-vendor/etc/init/init.vtservice_hidl.rc
-vendor/etc/init/init.wod.rc
-vendor/etc/init/volte_clientapi_ua.rc
-vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib/libipsec_ims_shr.so
-vendor/lib/librcs_interface.so
-vendor/lib/librcs_volte_core.so
-vendor/lib/libverno.so
-vendor/lib/libvolte_core_shr.so
-vendor/lib/libvolte_xdmc_shr.so
-vendor/lib/libwo.so
-vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
-vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib64/libipsec_ims_shr.so
-vendor/lib64/libverno.so
-vendor/lib64/libwo.so
-vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
-vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
+# Radio (IMS) - from rodin-user-15-AP3A.240905.015.A2-OS2.0.5.0.VOJCNXM-release-keys
+vendor/bin/hw/vtservice_aidl|ac31cf43057e03d3b2df617b0c9933ddc763cfa8
+vendor/etc/init/init.vtservice_aidl.rc|b213670f1233b2bb585adde523e37856c2750705
+vendor/lib64/hw/vendor.mediatek.hardware.videotelephony-impl.so|0b44dcaf684fe76a9f0f732082b9e41ec07d2a4e
+vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so;MODULE_SUFFIX=_vendor|c55b68762d5bb974d667918c7e16673b5f91a203
 
 # Secure Element
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek

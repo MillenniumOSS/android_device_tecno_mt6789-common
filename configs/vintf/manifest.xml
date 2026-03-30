@@ -343,15 +343,9 @@
         </interface>
         <fqname>@2.15::IPictureQuality/default</fqname>
     </hal>
-    <hal format="hidl">
+    <hal format="aidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IVideoTelephony</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IVideoTelephony/default</fqname>
+        <fqname>IVideoTelephony/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.trustonic.tee</name>
