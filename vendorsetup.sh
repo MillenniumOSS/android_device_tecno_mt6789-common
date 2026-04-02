@@ -29,6 +29,9 @@ cd ../../
 
 echo "- Applying Aperture Mediatek HFPS Mode and EIS Patches"
 cd packages/apps/Aperture
+git fetch yaap --unshallow
+git remote add LineageOS https://github.com/LineageOS/android_packages_apps_Aperture
+git fetch LineageOS lineage-23.2 && git merge FETCH_HEAD
 curl https://raw.githubusercontent.com/MillenniumOSS/patches/refs/heads/sixteen/packages/apps/Aperture/0001-Aperture-Enable-MediaTek-HFPS-Mode-for-60-FPS-video-.patch | git am || {
   RET=1
   git am --abort >/dev/null 2>&1
