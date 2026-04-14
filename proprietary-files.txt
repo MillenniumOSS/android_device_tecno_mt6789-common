@@ -1059,6 +1059,19 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 # Radio (gsm0710muxd) - from rodin-user-15-AP3A.240905.015.A2-OS2.0.5.0.VOJCNXM-release-keys
 vendor/bin/gsm0710muxd|70e638c98c51a70d6b3f797d37ad8528275eefbf
 
+# Radio (IMS)
+vendor/bin/volte_clientapi_ua
+vendor/etc/init/volte_clientapi_ua.rc
+vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
+
+# Radio (IMS - 64bit rcs volte ) - from XT2513-1_KANSAS_OPENLA_15_V1VK35.22-125_subsidy-DEFAULT_regulatory-DEFAULT_cid50_CFC
+vendor/bin/volte_rcs_ua|620c8a1a34ae503c6017fdb821fc31ee68360579
+vendor/bin/rcs_volte_stack|3481e48b9731a71ac6b47871e8845d05b3cc52fd
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.rcs-V1-ndk.so|00395952c5637891c848e9b1c138f4a51e83d030
+vendor/lib64/vendor.mediatek.hardware.rcs@2.0.so|b26b22606e7e147553543ceac9c95133b88f5ceb
+vendor/lib64/librcs_interface.so|c2231339a6a78bb8930ad9a292559d6f0a9579f5
+vendor/lib64/librcs_volte_core.so|a2cc92b5049bc1bb390e8d4d378ed17e08dc847c
+
 # Radio (IMS) - from rodin-user-15-AP3A.240905.015.A2-OS2.0.5.0.VOJCNXM-release-keys
 vendor/bin/hw/vtservice_aidl|ac31cf43057e03d3b2df617b0c9933ddc763cfa8
 vendor/etc/init/init.vtservice_aidl.rc|b213670f1233b2bb585adde523e37856c2750705
