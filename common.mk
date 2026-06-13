@@ -386,6 +386,9 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat:64 \
     libprotobuf-cpp-lite-3.9.1-vendorcompat:64
 
+PRODUCT_PACKAGES += \
+    mdota_symlink
+
 # Required libs as of 14 QPR3
 PRODUCT_PACKAGES += \
     libcamera_metadata_shim \
