@@ -594,7 +594,6 @@ vendor/lib64/libc++_shared.so
 vendor/lib64/libdre.so
 vendor/lib64/libdynamiclog.so
 vendor/lib64/libfeaturepolicy.so
-vendor/lib64/libhdrvideo.so
 vendor/lib64/libimagebuffer_wrapper.so
 vendor/lib64/libimgsensorca.so
 vendor/lib64/libispcameraca.so
@@ -631,35 +630,31 @@ vendor/etc/init/init.wmt_drv.rc
 # Display
 vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/VideoLog_dynamic.xml
 vendor/lib/egl/egl.cfg
 vendor/lib/mt6789/arm.graphics-V1-ndk_platform.so;SYMLINK=vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib64/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib64/hw/mt6789/gralloc.common.so;SYMLINK=vendor/lib64/hw/gralloc.common.so
+vendor/lib64/libVkLayer_mtk_rt_sdk.so
+
+# Display - from XT2513-1_KANSAS_OPENLA_15_V1VK35.22-125_subsidy-DEFAULT_regulatory-DEFAULT_cid50_CFC
+vendor/bin/hw/android.hardware.graphics.composer@3.1-service
+vendor/etc/init/android.hardware.graphics.composer@3.1-service.rc
+vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/lib64/hw/hwcomposer.mtk_common.so
-vendor/lib64/mt6789/libaiselector.so;SYMLINK=vendor/lib64/libaiselector.so
-vendor/lib64/mt6789/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
-vendor/lib64/mt6789/libgpudataproducer.so;SYMLINK=vendor/lib64/libgpudataproducer.so
-vendor/lib64/mt6789/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
-vendor/lib64/libOpenCL.so
+vendor/lib64/mt6835/libdpframework.so:vendor/lib64/mt6789/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
+vendor/lib64/mt6835/libmtk_drvb.so:vendor/lib64/mt6789/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 vendor/lib64/libcomposer_ext.so
+vendor/lib64/libion_mtk.so
+vendor/lib64/libion_ulit.so
 vendor/lib64/libged.so
 vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
 vendor/lib64/libgralloc_extra.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
-vendor/lib64/libion_mtk.so
-vendor/lib64/libion_ulit.so
-vendor/lib64/libmml.so
-vendor/lib64/libmmprofile.so
-vendor/lib64/libudf.so
-vendor/lib64/libVkLayer_mtk_rt_sdk.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
-vendor/priv-app/GpuGameDriver.mt6789/GpuGameDriver.mt6789.apk
 
 # Display (Mali)
 vendor/lib64/mt6789/arm.graphics-V1-ndk_platform.so;SYMLINK=vendor/lib64/arm.graphics-V1-ndk_platform.so
@@ -673,6 +668,8 @@ vendor/etc/gralloc/dpu_aeu.xml|94355caa28c4d7609a53db8ed9ba179370c991b5
 vendor/etc/gralloc/gpu.xml|0f6cc052e256cbf18caa0972a88766f4a14a0cd6
 vendor/etc/gralloc/vpu.xml|df22091da7830747f2eeba1a00faf0b87bcb0402
 vendor/etc/mali_platform.config|94ff34a831e05876d8af800f09847c5f2a336bcd
+vendor/lib64/hw/mt6835/gralloc.common.so:vendor/lib64/hw/mt6789/gralloc.common.so;SYMLINK=vendor/lib64/hw/gralloc.common.so
+vendor/lib64/mt6835/libgpudataproducer.so:vendor/lib64/mt6789/libgpudataproducer.so;SYMLINK=vendor/lib64/libgpudataproducer.so
 
 # Display (Mali) - from Nothing Phone (2a) (Pacman-B4.0-260225-1817).
 vendor/lib64/mt6886/arm.graphics-V3-ndk.so:vendor/lib64/mt6789/arm.graphics-V3-ndk.so;SYMLINK=vendor/lib64/arm.graphics-V3-ndk.so|34a267b511f2ac56573c2ea66deee9cb739eac37
@@ -686,22 +683,32 @@ vendor/lib64/mt6789/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 
-# Display (PQ)
-vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
-vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
-vendor/lib64/mt6789/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
-vendor/lib64/mt6789/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
-vendor/lib64/mt6789/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
+# Display (PQ) - from XT2513-1_KANSAS_OPENLA_15_V1VK35.22-125_subsidy-DEFAULT_regulatory-DEFAULT_cid50_CFC
+vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service
+vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc
+vendor/etc/AbnormalDisplayLog_dynamic.xml
+vendor/etc/VideoLog_dynamic.xml
+vendor/lib64/hw/mt6835/vendor.mediatek.hardware.pq_aidl-impl.so:vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq_aidl-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq_aidl-impl.so
+vendor/lib64/mt6835/libaiselector.so:vendor/lib64/mt6789/libaiselector.so;SYMLINK=vendor/lib64/libaiselector.so
+vendor/lib64/mt6835/libpq_cust_base.so:vendor/lib64/mt6789/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
+vendor/lib64/mt6835/libpq_prot.so:vendor/lib64/mt6789/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
+vendor/lib64/mt6835/libpqparamparser.so:vendor/lib64/mt6789/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
+vendor/lib64/libhdrvideo.so
+vendor/lib64/libmml.so
 vendor/lib64/libpqframework.so
+vendor/lib64/libpqhdrmetaparser.so
+vendor/lib64/libpqsharememory.so
+vendor/lib64/libpqtuning.so
+vendor/lib64/libpqxmlparser.so
+vendor/lib64/librgbwlightsensor.so
+vendor/lib64/libscltm.so
+vendor/lib64/libudf.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.11.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.12.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.13.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.14.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.15.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.4.so
@@ -710,6 +717,7 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
+vendor/lib64/vendor.mediatek.hardware.pq_aidl-V1-ndk.so
 
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
@@ -723,7 +731,6 @@ vendor/lib64/libwvhidl.so
 
 # DRVB
 vendor/lib/mt6789/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
-vendor/lib64/mt6789/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 
 # Fuelgauge
 vendor/bin/fuelgauged
@@ -944,9 +951,11 @@ vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
 vendor/etc/armnn_app.config
 vendor/etc/nnapi_powerhal.json
+vendor/lib64/mt6789/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
 vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
 vendor/lib64/mt6789/libneuron_adapter_mgvi.so;SYMLINK=vendor/lib64/libneuron_adapter_mgvi.so
 vendor/lib64/mt6789/libneuron_runtime.5.so;SYMLINK=vendor/lib64/libneuron_runtime.5.so
+vendor/lib64/libOpenCL.so
 vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libcmdl.so
@@ -1017,6 +1026,7 @@ vendor/lib64/libgwsd-ril.so
 vendor/lib64/libgwsdv2-ril.so
 vendor/lib64/libgwsdv3-ril.so
 vendor/lib64/libmipc.so
+vendor/lib64/libmmprofile.so
 vendor/lib64/libmnetlink_v104.so
 vendor/lib64/libmtk-ril.so
 vendor/lib64/libmtkares.so

@@ -40,16 +40,6 @@
         <fqname>@4.0::IAllocator/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.graphics.composer</name>
-        <transport>hwbinder</transport>
-        <version>2.3</version>
-        <interface>
-            <name>IComposer</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.3::IComposer/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
         <transport arch="64">passthrough</transport>
         <version>4.0</version>
@@ -247,12 +237,12 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mms</name>
         <transport>hwbinder</transport>
-        <version>1.6</version>
+        <version>1.7</version>
         <interface>
             <name>IMms</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.6::IMms/default</fqname>
+        <fqname>@1.7::IMms/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkpower</name>
@@ -333,15 +323,9 @@
         </interface>
         <fqname>@1.1::INvram/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.pq</name>
-        <transport>hwbinder</transport>
-        <version>2.15</version>
-        <interface>
-            <name>IPictureQuality</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.15::IPictureQuality/default</fqname>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.pq_aidl</name>
+        <fqname>IPictureQuality_AIDL/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
