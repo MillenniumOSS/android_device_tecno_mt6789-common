@@ -48,10 +48,6 @@ on property:init.svc.vendor.charger=running
     start fuelgauged
     start fuelgauged_nvram
 
-# initialize powerHAL when boot is completed
-on property:sys.boot_completed=1
-    setprop vendor.mediatek.powerhal.init 1
-
 on fs
     # mount fstab
     mount_all --early
