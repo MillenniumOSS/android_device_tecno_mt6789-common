@@ -48,10 +48,6 @@ on property:init.svc.vendor.charger=running
     start fuelgauged
     start fuelgauged_nvram
 
-# initialize powerHAL when boot is completed
-on property:sys.boot_completed=1
-    setprop vendor.mediatek.powerhal.init 1
-
 on fs
     # mount fstab
     mount_all --early
@@ -383,14 +379,9 @@ on property:sys.boot_completed=1
     # Back to default VM settings
     write /proc/sys/vm/dirty_expire_centisecs 3000
 
-on property:sys.boot_completed=1
-
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
-
-on property:sys.boot_completed=1
-    restart android-hardware-media-c2-hal-1-2
 
 on property:sys.boot_completed=1
 # Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 10%)
@@ -403,11 +394,3 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/nnapi-hal/cpu.shares 20480
     write /dev/cpuctl/rt/cpu.shares 20480
     write /dev/cpuctl/top-app/cpu.shares 20480
-
-# Report max frequency to unity and miHoYo (HoYoverse) games tasks
-    write /proc/sys/kernel/sched_lib_name "com.miHoYo.,com.HoYoverse.,UnityMain,libunity.so"
-    write /proc/sys/kernel/sched_lib_mask_force 255
-
-# OTG
-on property:sys.boot_completed=1
-    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
