@@ -208,7 +208,6 @@ media.c2.hal.selection=aidl
 debug.mediatek.disp_decompress=1
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
-ro.vendor.iomanager.support=1
 ro.vendor.jpeg_decode_sw_opt=2
 ro.vendor.mtk.c2.vdec.fmt.support.level=1
 ro.vendor.mtk_sec_video_path_support=1
@@ -251,11 +250,6 @@ ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_support=1
 
 # Power
-persist.vendor.iomanager.dirty=1
-persist.vendor.iomanager.switch=1
-persist.vendor.pnpmgr.enable=1
-persist.vendor.pnpmgr.gamemode.enable=1
-persist.vendor.pnpmgr.gamerecord.enable=1
 ro.vendor.powerhal.gsi_watermark=500
 ro.vendor.powerhal_fling_mode_support=1
 vendor.perf.framepacing.enable=1
