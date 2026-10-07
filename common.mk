@@ -1,4 +1,4 @@
-#
+
 # Copyright (C) 2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -9,6 +9,7 @@ COMMON_PATH := device/tecno/mt6789-common
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
+$(call soong_config_set,update_engine,map_vabc_in_recovery,true)
 
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -132,7 +133,6 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor:64 \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack-service.mediatek
 
@@ -458,6 +458,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/mediatek/libaedv \
+    hardware/mediatek/libion_mtk \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/google/interfaces \
     hardware/google/pixel/pixelstats \
@@ -497,6 +498,7 @@ $(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper:64 \
     android.hardware.wifi-service \
+    wlan_assistant \
     wpa_supplicant \
     hostapd \
     libkeystore-wifi-hidl:64 \
