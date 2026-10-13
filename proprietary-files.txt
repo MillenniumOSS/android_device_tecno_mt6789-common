@@ -952,19 +952,20 @@ vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
 vendor/etc/init/init.nxp.nfc.rc
 vendor/lib64/libpn557_fw.so|cb8575ba128089742f73ec0963b09cde18b1afe5
 
-# NVRAM
-vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
-vendor/bin/nvram_daemon
-vendor/etc/init/nvram_daemon.rc
-vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
-vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
-vendor/lib64/libconnfem.so
-vendor/lib64/libcustom_nvram.so
-vendor/lib64/libfile_op.so
-vendor/lib64/libnvram.so
-vendor/lib64/libnvram_sec.so
-vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
-vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
+# NVRAM - from LH7n-H894JKLM-U-GL-250416V781
+vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service|fd42ef1bf20d8293999318d4903b8d3ed93df533
+vendor/bin/nvram_daemon|1229a2e588a11369ce5413c088333dc94f596700
+vendor/etc/init/nvram_daemon.rc|02c739c622f871b7ec801755f64d063eee91ba77
+vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|328d76546b36b7f67f48dff0fad46a419188a7f7
+vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|7cee3670df1cf415ef693f9b93b9da7c98503b9e
+vendor/lib64/libconnfem.so|fdb90aea74c11224f7471e08f175b41497535708
+vendor/lib64/libcustom_nvram.so|4d05d5f73a8705196a8532e1eb8343ffd18d1bf1
+vendor/lib64/libfile_op.so|cbd3ec7e82fae8f59f5f9ebb5235ffd0b1bac93e
+vendor/lib64/libnvram.so|ceda15faf174209107161fb55ae8ea3f713f02f4|d6ff4fcf5d0242a4606223ce37cc1a08918711a8
+vendor/lib64/libnvram_sec.so|16d183a4570fe2278b9d3d81c8d86be20c7a8fde
+vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so|494b12bc0fc38d81208189e7cdf3731bd0a8e4e5
+vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so|2e84990cb1523c59ae72533fd0bbc87e17aef500
+ 
 
 # Power
 vendor/lib64/libpower_timer.so
