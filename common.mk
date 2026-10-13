@@ -419,10 +419,6 @@ PRODUCT_PACKAGES += \
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Secure Element
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2.vendor:64
-
 # Sensors
 PRODUCT_PACKAGES += \
     libsensorndkbridge:64 \

@@ -1069,10 +1069,6 @@ vendor/lib64/vendor.mediatek.hardware.clientapi-V1-ndk.so|31277eed42580fe9df47cc
 vendor/lib64/vendor.mediatek.hardware.rcs-V1-ndk.so|9c88d669b1409b1e334e2048d57fb1cd3360ae4c
 vendor/lib64/vendor.mediatek.hardware.rcs@2.0.so|e5705a6727222e429c3a308230fb18aef20b7e8f
 
-# Secure Element
-vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
-vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
-
 # Sensors
 vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6789.so
 vendor/lib64/libhfmanager.so
