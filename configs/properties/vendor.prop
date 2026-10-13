@@ -185,6 +185,10 @@ persist.vendor.volte_support=1
 persist.vendor.vonr_setting_support=0
 ro.vendor.md_auto_setup_ims=1
 ro.vendor.mtk_data_config=1
+persist.vendor.vt.camera.rotate=1
+persist.vendor.wfc.cnop_vowifi=1
+ro.vendor.vt_hevc_support=1
+ro.vendor.vt.mtk_thin_md_support_mode=0
 
 # Keymaster
 ro.crypto.volume.filenames_mode=aes-256-cts
@@ -290,10 +294,6 @@ persist.vendor.md_c2k_cap_dep_check=0
 persist.vendor.mdrsra_v2_support=1
 persist.vendor.mims_support=2
 persist.vendor.mtk_sim_switch_policy=2
-persist.vendor.radio.fd.counter=150
-persist.vendor.radio.fd.off.counter=50
-persist.vendor.radio.fd.off.r8.counter=50
-persist.vendor.radio.fd.r8.counter=150
 persist.vendor.radio.msimmode=dsds
 persist.vendor.radio.mtk_dsbp_support=2
 persist.vendor.radio.mtk_ps2_rat=L/W/G
@@ -317,8 +317,14 @@ ro.vendor.mtk_ril_mode=c6m_1rild
 ro.vendor.mtk_rild_read_imsi=1
 ro.vendor.mtk_sim_hot_swap_common_slot=1
 ro.vendor.mtk_single_bin_modem_support=1
+ro.vendor.mtk_thin_md_telephony_support_mode=0
 ro.vendor.mtk_world_phone_policy=0
 ro.vendor.sim_me_lock_mode=3
+ro.vendor.ril.set_sbp_place=0
+ro.vendor.num_md_protocol=2
+telephony.active_modems.max_count=2
+ro.vendor.mtk_sim_card_onoff=3
+ro.vendor.mtk_uicc_clf=1
 
 # RKPD
 remote_provisioning.enable_rkpd=true

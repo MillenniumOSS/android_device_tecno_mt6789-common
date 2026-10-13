@@ -40,7 +40,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.mediatek.hardware.apuware.apusys@2.1',
         'vendor.mediatek.hardware.apuware.hmp@1.0',
         'vendor.mediatek.hardware.apuware.utils@2.0',
-        'vendor.mediatek.hardware.videotelephony@1.0'
+        'vendor.mediatek.hardware.videotelephony-V1-ndk'
     ): lib_fixup_vendor_suffix,
 }
 
@@ -93,7 +93,7 @@ blob_fixups: blob_fixups_user_type = {
         .fix_soname(),
     'vendor/etc/init/init.thermal_core.rc': blob_fixup()
         .regex_replace('ro.vendor.mtk_thermal_2_0', 'vendor.thermal.link_ready'),
-    ('vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 'vendor/lib64/libstfactory-vendor.so', 'vendor/lib64/libnvram.so', 'vendor/lib/libsysenv.so', 'vendor/lib64/libsysenv.so', 'vendor/lib64/libtflite_mtk.so'): blob_fixup()
+    ('vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 'vendor/lib64/libstfactory-vendor.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libtflite_mtk.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
         .patchelf_version('0_17_2')
@@ -124,8 +124,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libutils.so', 'libutils-v32.so')
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so')
         .replace_needed('libbinder.so', 'libbinder-v32.so'),
-    'vendor/bin/hw/mtkfusionrild': blob_fixup()
-        .add_needed('libutils-v32.so'),
     'vendor/lib64/librt_extamp_intf.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/bin/mnld': blob_fixup()
