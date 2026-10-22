@@ -776,7 +776,6 @@ vendor/lib64/mt6789/libmnl.so:vendor/lib64/libmnl_mtk.so
 vendor/lib64/lbs_hidl_service-impl.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
-vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 
 # Keymaster
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
