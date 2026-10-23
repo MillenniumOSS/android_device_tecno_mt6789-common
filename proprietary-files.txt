@@ -479,7 +479,6 @@ vendor/lib64/libCamera_s5kjn1mipiraw_Video_Zoom2.so
 vendor/lib64/libcam.seninfn3d.so
 vendor/lib64/libcam3_tranelapsedtime.so
 vendor/lib64/libcam3_tranpriorityctrl.so
-vendor/lib64/libcam3_transerverengine.so
 vendor/lib64/libcamalgo.3dnr.so
 vendor/lib64/libcamalgo.WarpMapResizer.so
 vendor/lib64/libcamalgo.dngop.so
@@ -603,12 +602,6 @@ vendor/lib64/libpixelflinger.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libvidhance_active_ois.so
 vendor/lib64/libvidhance_stabilizer.so
-
-# Camera (TranCam Dependencies)
-vendor/bin/hw/vendor.transsion.hardware.trancam.trancamserver@1.0-service
-vendor/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xml
-vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 
 # Camera Configuration files
 vendor/data/camera/vidhance/vidhance_calibration
