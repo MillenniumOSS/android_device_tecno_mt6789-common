@@ -671,7 +671,6 @@ vendor/lib64/liblibarm_mali_config_sysprops.so|eca4cde8c0b75288a8af6a63a2edb2b47
 # Display (AAL)
 vendor/lib64/mt6789/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
 vendor/lib64/mt6789/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
-vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 
 # Display (PQ)
